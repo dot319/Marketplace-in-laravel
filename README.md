@@ -8,6 +8,7 @@ Visit my <a href="https://www.doriekeberends.nl">portfolio</a>.</p>
 - Pushed new project to github, replacing the old one
 - Styled login page and nav bar
 - Users can now upload ads to the database
+- There is a "browse ads" page that lists all ads uploaded to the database
 
 <b>Friday, November 9th 2018</b>
 - Started with a new Laravel after discovering Laravels built-in registration and login system

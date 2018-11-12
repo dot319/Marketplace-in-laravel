@@ -9,6 +9,10 @@
         </div>
 
         <div class="small-text navbar-item">
+            <a href="/ads">
+                Browse ads
+            </a>
+             | 
             <a href="/ads/create">
                 <button id="navbar-ad-button">
                     Place ad

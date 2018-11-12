@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //----------------------------------------------------------------------
+Route::get('/ads', 'AdController@index');
 Route::get('/ads/create', 'AdController@create')->middleware('auth');
 Route::post('/ads', 'AdController@store');
 
