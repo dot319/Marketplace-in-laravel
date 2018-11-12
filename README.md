@@ -4,7 +4,18 @@ See how the site is coming along <a href="https://virtualyardsale.doriekeberends
 Visit the project Trello board <a href="https://trello.com/b/naFvOXNv/new-marketplace">here</a>.<br />
 Visit my <a href="https://www.doriekeberends.nl">portfolio</a>.</p>
 
-<b>Thursday 08 november 2018</b>
+<b>Monday, November 12th 2018</b>
+- Styled registration form
+- Pushed new project to github, replacing the old one
+
+<b>Friday, November 9th 2018</b>
+- Started with a new Laravel after discovering Laravels built-in registration and login system
+- Set up Laravels native registration and login system
+- Replaced all views provided by the Laravel registration/login system with new views (no native styling/nested divs etc)
+- Created a landing page
+- Added link to registration and login page
+
+<b>Thursday, November 8th 2018</b>
 - Starting out with a blank Laravel project
 - Added a readme file
 - Created a new <a href="https://trello.com/b/naFvOXNv/new-marketplace">Trello board</a> for the project.
