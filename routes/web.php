@@ -19,5 +19,26 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//----------------------------------------------------------------------
+Route::get('/ads/create', 'AdController@create')->middleware('auth');
+Route::post('/ads', 'AdController@store');
+
+//Ads routing
+//  index get /ads @index
+//  show get /ads/{ad} @show
+//  create get /ads/create @create
+//  store post /ads @store
+//  edit get /ads/{ad}/edit @edit
+//  delete delete /ads/{ad} @destroy
+//  update patch /ads/{ad} @update
+
+
+
+
 //new
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
+
+
+

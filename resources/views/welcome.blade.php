@@ -39,7 +39,11 @@
             </div>
 
             <div>
-                <button id="landing-page-ad-button" class="box-shadow">Place ad</button>
+                <a href="/ads/create">
+                    <button id="landing-page-ad-button" class="box-shadow">
+                        Place ad
+                    </button>
+                </a>
             </div>
 
         </div>

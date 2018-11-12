@@ -9,9 +9,11 @@
         </div>
 
         <div class="small-text navbar-item">
-            <button id="navbar-ad-button" class="box-shadow">
-                Place ad
-            </button>
+            <a href="/ads/create">
+                <button id="navbar-ad-button">
+                    Place ad
+                </button>
+            </a>
         </div>
 
         <div class="small-text navbar-item">

@@ -24,7 +24,7 @@ class AdController extends Controller
      */
     public function create()
     {
-        //
+        return view('ads/create');
     }
 
     /**
@@ -33,9 +33,19 @@ class AdController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request) {
+
+        $validated = request()->validate([
+            'title' => ['required', 'min:3'],
+            'description' => ['required', 'min:3'],
+            'price' => ['required']
+        ]);
+
+        $validated['user_id'] = auth()->id();
+
+        Ad::create($validated);
+
+        return redirect('/');
     }
 
     /**
