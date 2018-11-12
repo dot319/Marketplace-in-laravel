@@ -9,6 +9,12 @@
         </div>
 
         <div class="small-text navbar-item">
+            <button id="navbar-ad-button" class="box-shadow">
+                Place ad
+            </button>
+        </div>
+
+        <div class="small-text navbar-item">
 
                 @guest
 

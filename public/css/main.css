@@ -19,10 +19,12 @@ button:hover {
     background-color:  rgb(0, 93, 216);
 }
 
+#navbar-ad-button,
 #landing-page-ad-button {
     background-color: rgb(0, 135, 0);
 }
 
+#navbar-ad-button:hover,
 #landing-page-ad-button:hover {
     background-color: rgb(0, 130, 0);
 }

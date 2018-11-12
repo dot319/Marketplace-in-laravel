@@ -1,6 +1,5 @@
 <h3>Marketplace reboot</h3>
 <p>This is a reboot of the marketplace project I made two weeks ago (<a href="https://github.com/dot319/Marketplace">this one</a>). I'm starting with a blank Laravel project and will rebuild it step by step.<br />
-See how the site is coming along <a href="https://virtualyardsale.doriekeberends.nl">here</a>. <br />
 Visit the project Trello board <a href="https://trello.com/b/naFvOXNv/new-marketplace">here</a>.<br />
 Visit my <a href="https://www.doriekeberends.nl">portfolio</a>.</p>
 
