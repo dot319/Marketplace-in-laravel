@@ -1,0 +1,214 @@
+/* ========== General styling ======================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', 'Calibri', sans-serif;
+    font-size: 105%;
+    color: rgb(65, 65, 65);
+    border: none;
+    border-color: rgb(65, 65, 65);
+    text-decoration: none;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100vh;
+    background: url("../images/background5.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+p {
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 220%;
+}
+
+h2 {
+    font-size: 180%;
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+}
+
+button {
+    background-color: rgb(0, 110, 255);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color:  rgb(0, 93, 216);
+    color: rgba(255, 255, 255, 1);
+}
+
+footer {
+    padding: 10px;
+}
+
+/* ========== General styling classes =============================================== */
+
+/* Text styling ------------------------------------------------- */
+
+.header {
+    font-family: 'KoHo', 'Calibri', sans-serif;
+}
+
+.small-text {
+    font-size: 85%;
+}
+
+/* Element styling ---------------------------------------------- */
+.round-60 {
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+}
+
+.padding-40 {
+    padding: 40px;
+}
+
+.box-shadow {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.white-bg {
+    background-color: rgb(255, 255, 255);
+}
+
+.rounded-10 {
+    border-radius: 10px;
+}
+
+.line-bottom {
+    border-bottom: 1px rgb(189, 189, 189) solid;
+    padding-bottom: 8px;
+}
+
+/* Element placement -------------------------------------------- */
+.center-parent {
+    text-align: center;
+}
+
+.perfect-center-parent {
+    height: inherit;
+    display: grid;
+}
+
+.perfect-center-child {
+    margin: auto;
+}
+
+.perfect-center-inline-flex-parent {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.float-right {
+    float: right;
+}
+
+.below-navbar {
+    position: relative;
+}
+
+.narrow {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+/* ========== Recurring element styling ============================================= */
+
+/* Form styling ------------------------------------------------- */
+.form {
+    width: 50vw;
+    min-width: 250px;
+}
+
+.form-header {
+    width: 100%;
+    text-align: center;
+}
+
+.form-input {
+    width: 100%;
+    font-size: 85%;
+    margin: 25px 0px;
+}
+
+input {
+    height: 40px;
+    width: 100%;
+    padding: 5px;
+    border: solid;
+    border-width: 1px;
+}
+
+.form-error {
+    color: red;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* ========== Landing page ========================================================== */
+#landing-page div {
+    margin: 40px 0px;
+}
+
+#landing-page-header {
+    font-size: 120%;
+    letter-spacing: 3px;
+}
+
+#landing-page div form * {
+    margin: 0px 5px;
+}
+
+#landing-page-search-bar {
+    height: 60px;
+    width: 50vw;
+    min-width: 250px;
+    padding: 15px;
+}
+
+#landing-page-ad-button {
+    background-color: rgb(0, 135, 0);
+    height: 100px;
+    width: 200px;
+    font-size: 130%;
+}
+
+#landing-page-ad-button:hover {
+    background-color: rgb(0, 130, 0);
+}
+
+/* ========== Navbar ================================================================ */
+#navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 0px 100px;
+}
+
+#navbar div {
+    display: inline-block;
+    margin: 10px;
+}
