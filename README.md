@@ -7,6 +7,7 @@ Visit my <a href="https://www.doriekeberends.nl">portfolio</a>.</p>
 <b>Monday, November 12th 2018</b>
 - Styled registration form
 - Pushed new project to github, replacing the old one
+- Styled login page and nav bar
 
 <b>Friday, November 9th 2018</b>
 - Started with a new Laravel after discovering Laravels built-in registration and login system

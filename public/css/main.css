@@ -1,14 +1,41 @@
 /* ========== General styling ======================================================= */
 
+/* Color scheme ---------------------------------------------- */
+*{
+    color: rgb(65, 65, 65);
+    border-color: rgb(65, 65, 65);
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+}
+
+button,
+#navbar div {
+    background-color: rgb(0, 110, 255);
+}
+
+button:hover {
+    background-color:  rgb(0, 93, 216);
+}
+
+#landing-page-ad-button {
+    background-color: rgb(0, 135, 0);
+}
+
+#landing-page-ad-button:hover {
+    background-color: rgb(0, 130, 0);
+}
+
+/* HTML tags ------------------------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', 'Calibri', sans-serif;
     font-size: 105%;
-    color: rgb(65, 65, 65);
     border: none;
-    border-color: rgb(65, 65, 65);
     text-decoration: none;
 }
 
@@ -41,19 +68,13 @@ h2 {
     font-size: 180%;
 }
 
-a:hover {
-    color: rgb(0, 0, 0);
-}
-
 button {
-    background-color: rgb(0, 110, 255);
     color: rgba(255, 255, 255, 0.9);
     padding: 10px;
 }
 
 button:hover {
     cursor: pointer;
-    background-color:  rgb(0, 93, 216);
     color: rgba(255, 255, 255, 1);
 }
 
@@ -153,13 +174,22 @@ footer {
     margin: 25px 0px;
 }
 
-input {
+.text-input {
     height: 40px;
     width: 100%;
     padding: 5px;
     border: solid;
     border-width: 1px;
 }
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
 
 .form-error {
     color: red;
@@ -168,6 +198,13 @@ input {
 }
 
 /* ========== Landing page ========================================================== */
+#landing-page-user-box {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 10px;
+}
+
 #landing-page div {
     margin: 40px 0px;
 }
@@ -189,14 +226,9 @@ input {
 }
 
 #landing-page-ad-button {
-    background-color: rgb(0, 135, 0);
     height: 100px;
     width: 200px;
     font-size: 130%;
-}
-
-#landing-page-ad-button:hover {
-    background-color: rgb(0, 130, 0);
 }
 
 /* ========== Navbar ================================================================ */
@@ -205,10 +237,25 @@ input {
     top: 0;
     z-index: 1;
     width: 100%;
-    padding: 0px 100px;
+    border-spacing: 20px;
+}
+
+#navbar * {
+    color: white;
 }
 
 #navbar div {
-    display: inline-block;
     margin: 10px;
+    padding: 10px;
+    display: table-cell;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#navbar div a {
+    color: rgb(250, 250, 250);
+}
+
+#navbar div a:hover {
+    color: rgb(255, 255, 255);
 }

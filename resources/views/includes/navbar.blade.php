@@ -1,6 +1,6 @@
 <nav>
     <div id="navbar">
-        <div>
+        <div class="navbar-item">
             <span >
                 <a href="{{ url('/') }}" class="header">
                     {{ config('app.name', 'Laravel') }}
@@ -8,7 +8,7 @@
             </span>
         </div>
 
-        <div class="small-text float-right">
+        <div class="small-text navbar-item">
 
                 @guest
 

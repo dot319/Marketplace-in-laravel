@@ -12,28 +12,28 @@
                 </div>
     
                 <div class="form-input">
-                    <input type="text" placeholder="{{ __('Name') }}" name="name" value="{{ old('name') }}" required autofocus>
+                    <input class="text-input" type="text" placeholder="{{ __('Name') }}" name="name" value="{{ old('name') }}" required autofocus>
                     @if ($errors->has('name'))
                         <div class="form-error">{{ $errors->first('name') }}</div>
                     @endif
                 </div>
     
                 <div class="form-input">
-                    <input type="email" placeholder="{{ __('E-Mail Address') }}" name="email" value="{{ old('email') }}" required>
+                    <input class="text-input" type="email" placeholder="{{ __('E-Mail Address') }}" name="email" value="{{ old('email') }}" required>
                     @if ($errors->has('email'))
                         <div class="form-error">{{ $errors->first('email') }}</div>
                     @endif
                 </div>
     
                 <div class="form-input">
-                    <input type="password" placeholder="{{ __('Password') }}" name="password" required>
+                    <input class="text-input" type="password" placeholder="{{ __('Password') }}" name="password" required>
                     @if ($errors->has('password'))
                         <div class="form-error">{{ $errors->first('password') }}</div>
                     @endif
                 </div>
     
                 <div class="form-input">
-                    <input type="password" placeholder="{{ __('Confirm Password') }}" name="password_confirmation" required>
+                    <input class="text-input" type="password" placeholder="{{ __('Confirm Password') }}" name="password_confirmation" required>
                 </div>
     
                 <div class="form-input">
