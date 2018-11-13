@@ -125,6 +125,13 @@ footer {
     padding-bottom: 8px;
 }
 
+.white-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+}
+
 /* Element placement -------------------------------------------- */
 .center-parent {
     text-align: center;
@@ -231,7 +238,7 @@ footer {
 
 #landing-page-header {
     font-size: 120%;
-    letter-spacing: 3px;
+    letter-spacing: 15px;
 }
 
 #landing-page div form * {
@@ -282,9 +289,30 @@ footer {
 
 /* =========== Ad list ============================================================= */
 .adlist-item {
-    margin: 10px 20%;
+    margin: 0px 20% 20px 20%;
     background-color: white;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.adlist-item:hover {
+    transform: scale(1.03, 1.03);
+}
+
+/* ========== Ad details ========================================================== */
+#ad-details-header {
+    display: flex;
+    align-items: baseline;
+}
+
+#ad-details-user {
+    margin-left: auto;
+}
+
+#ad-details-description {
+    margin: 20px 0px;
+    background-color: rgb(241, 247, 255);
+    padding: 10px;
 }

@@ -3,12 +3,13 @@
 @section('content')
 
         @foreach ($ads as $ad)
-            <div class="adlist-item">
-                <p><b>{{ $ad->title }}</b></p>
-                <p>{{ $ad->description }}</p>
-                <p>&euro;{{ $ad->price }}</p>
-            </div>
+            <a href="/ads/{{ $ad->id }}">
+                <div class="adlist-item">
+                    <p><b>{{ $ad->title }}</b></p>
+                    <p>{{ $ad->description }}</p>
+                    <p>&euro;{{ $ad->price }}</p>
+                </div>
+            </a>
         @endforeach
-
 
 @endsection

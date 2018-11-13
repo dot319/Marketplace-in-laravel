@@ -8,7 +8,7 @@
 
     @yield('content')
             
-    <script src="{{ asset('js/scripts.js') }}" defer></script>
+    @include('includes/scripts')
 
 </body>
 </html>

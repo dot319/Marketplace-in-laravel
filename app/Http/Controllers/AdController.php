@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Ad;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AdController extends Controller
 {
@@ -57,7 +58,8 @@ class AdController extends Controller
      */
     public function show(Ad $ad)
     {
-        //
+        $user = DB::table('users')->where('id', $ad->user_id)->value('name');
+        return view('ads/show', ['ad' => $ad, 'user' => $user]);
     }
 
     /**

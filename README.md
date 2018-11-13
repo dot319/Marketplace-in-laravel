@@ -3,6 +3,9 @@
 Visit the project Trello board <a href="https://trello.com/b/naFvOXNv/new-marketplace">here</a>.<br />
 Visit my <a href="https://www.doriekeberends.nl">portfolio</a>.</p>
 
+<b>Tuesday, November 13th 2018</b>
+- Created an ad details page
+
 <b>Monday, November 12th 2018</b>
 - Styled registration form
 - Pushed new project to github, replacing the old one
