@@ -102,6 +102,7 @@ class AdController extends Controller
      */
     public function destroy(Ad $ad)
     {
-        //
+        $ad->delete();
+        return redirect('/ads');
     }
 }

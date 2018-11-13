@@ -20,6 +20,14 @@
         <a href="/ads/{{ $ad->id }}/edit">
             <button><span class="im im-edit"></span> Edit</button>
         </a>
+        <form class="inline margin-left-20" action="/ads/{{ $ad->id }}" method="POST">
+            @csrf 
+            @method('delete')
+            <button class="red-button" type="submit">
+                <span class="im im-x-mark-circle"></span>
+                 Delete
+            </button>
+        </form>
     </div>
 
     @endif

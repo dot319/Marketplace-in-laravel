@@ -39,6 +39,14 @@
                     @endif
 
                 </form>
+                <form class="inline-block" action="ads/{{ $ad->id }}" method="POST">
+                    @csrf 
+                    @method('delete')
+                    <button class="red-button" type="submit">
+                        <span class="im im-x-mark-circle"></span>
+                         Delete ad
+                    </button>
+                </form>
             @else 
                 You're not allowed to edit this ad.
             @endif

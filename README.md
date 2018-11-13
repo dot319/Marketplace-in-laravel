@@ -6,6 +6,7 @@ Visit my <a href="https://www.doriekeberends.nl">portfolio</a>.</p>
 <b>Tuesday, November 13th 2018</b>
 - Created an ad details page
 - Users can now edit their own ads
+- Users can now delete their own ads
 
 <b>Monday, November 12th 2018</b>
 - Styled registration form
