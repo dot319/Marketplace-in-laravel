@@ -24,6 +24,9 @@ Route::get('/ads', 'AdController@index');
 Route::get('/ads/create', 'AdController@create')->middleware('auth');
 Route::post('/ads', 'AdController@store');
 Route::get('/ads/{ad}', 'AdController@show');
+Route::get('/ads/{ad}/edit', 'AdController@edit')->middleware('auth');
+Route::patch('/ads/{ad}', 'AdController@update');
+
 
 //Ads routing
 //  index get /ads @index

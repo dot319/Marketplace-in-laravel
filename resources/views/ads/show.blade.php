@@ -12,6 +12,18 @@
     <div id="ad-details-price">
         &euro; {{ $ad->price }}
     </div>
+
+    
+    @if ($ad->user_id == $auth)
+
+    <div class="margin-top-20">
+        <a href="/ads/{{ $ad->id }}/edit">
+            <button><span class="im im-edit"></span> Edit</button>
+        </a>
+    </div>
+
+    @endif
+
 </div>
 
 @endsection

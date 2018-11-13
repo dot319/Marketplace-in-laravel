@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Ad;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class AdController extends Controller
@@ -59,7 +60,8 @@ class AdController extends Controller
     public function show(Ad $ad)
     {
         $user = DB::table('users')->where('id', $ad->user_id)->value('name');
-        return view('ads/show', ['ad' => $ad, 'user' => $user]);
+        $authId = Auth::id();
+        return view('ads/show', ['ad' => $ad, 'user' => $user, 'auth' => $authId]);
     }
 
     /**
@@ -70,7 +72,8 @@ class AdController extends Controller
      */
     public function edit(Ad $ad)
     {
-        //
+        $authId = Auth::id();
+        return view('ads/edit', ['ad' => $ad, 'authId' => $authId]);
     }
 
     /**
@@ -82,7 +85,13 @@ class AdController extends Controller
      */
     public function update(Request $request, Ad $ad)
     {
-        //
+        $validated = request()->validate([
+            'title' => ['required', 'min:3'],
+            'description' => ['required', 'min:3'],
+            'price' => ['required']
+        ]);
+        $ad->update($validated);
+        return redirect("/ads/$ad->id");
     }
 
     /**
