@@ -36,7 +36,9 @@
 
                 @else
 
-                    <span>Welcome, {{ Auth::user()->name }}!</span>
+                    <span>
+                        Welcome, {{ Auth::user()->name }}!
+                    </span>
                     <span>
                         <a href="{{ route('logout') }}" 
                             oncspanck="event.preventDefault();
