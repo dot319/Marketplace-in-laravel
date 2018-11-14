@@ -132,6 +132,10 @@ footer {
     margin-left: 20px;
 }
 
+.margin-left-auto {
+    margin-left: auto;
+}
+
 .padding-40 {
     padding: 40px;
 }
@@ -358,6 +362,9 @@ footer {
 }
 
 /* ========== Profile page ======================================================== */
+#profile-header {
+    display: flex;
+}
 
 /* Ad list --------------------------------------------------- */
 #profile-ad-list {

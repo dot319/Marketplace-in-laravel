@@ -2,8 +2,16 @@
 
 @section('content')
 <div class="white-box">
-    <div class="line-bottom">
+    <div id="profile-header" class="line-bottom">
+        <div>
             <h2> {{ $user->name }} </h2>
+        </div>
+        <div class="margin-left-auto">
+            <button>
+                <span class="im im-edit"></span>
+                 Edit
+            </button>
+        </div>
     </div>
     <div>
         <p> Welcome to {{ $user->name }}'s profile!</p>
