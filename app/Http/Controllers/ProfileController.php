@@ -14,4 +14,8 @@ class ProfileController extends Controller
         $auth = Auth::id();
         return view('profiles/show', ['user' => $user, 'ads' => $ads, 'auth' => $auth]);
     }
+
+    public function edit(User $user) {
+        return view('profiles/edit');
+    }
 }

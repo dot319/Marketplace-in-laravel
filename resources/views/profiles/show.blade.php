@@ -9,10 +9,12 @@
         </div>
         @if ($user->id == $auth)
             <div class="margin-left-auto">
-                <button>
-                    <span class="im im-edit"></span>
-                        Edit
-                </button>
+                <a href="/profiles/{{ $user->id }}/edit">
+                    <button>
+                        <span class="im im-edit"></span>
+                         Edit profile
+                    </button>
+                </a>
             </div>
         @endif 
     </div>

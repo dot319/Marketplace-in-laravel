@@ -31,3 +31,4 @@ Route::delete('/ads/{ad}', 'AdController@destroy');
 
 //----------------------------------------------------------------------
 Route::get('/profiles/{user}', 'ProfileController@show');
+Route::get('/profiles/{user}/edit', 'ProfileController@edit')->middleware('auth');
