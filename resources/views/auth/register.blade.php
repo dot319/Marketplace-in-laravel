@@ -12,8 +12,8 @@
                 </div>
     
                 <div class="form-input">
-                    <input class="text-input" type="text" placeholder="{{ __('Name') }}" name="name" value="{{ old('name') }}" required autofocus>
-                    @if ($errors->has('name'))
+                    <input class="text-input" type="text" placeholder="Username" name="username" value="{{ old('username') }}" required autofocus>
+                    @if ($errors->has('username'))
                         <div class="form-error">{{ $errors->first('name') }}</div>
                     @endif
                 </div>
