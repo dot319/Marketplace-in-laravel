@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout'); 
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -28,23 +29,5 @@ Route::get('/ads/{ad}/edit', 'AdController@edit')->middleware('auth');
 Route::patch('/ads/{ad}', 'AdController@update');
 Route::delete('/ads/{ad}', 'AdController@destroy');
 
-
-//Ads routing
-//  index get /ads @index
-//  show get /ads/{ad} @show
-//  create get /ads/create @create
-//  store post /ads @store
-//  edit get /ads/{ad}/edit @edit
-//  delete delete /ads/{ad} @destroy
-//  update patch /ads/{ad} @update
-
-
-
-
-//new
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-
-
-
-
-
+//----------------------------------------------------------------------
+Route::get('/profiles/{user}', 'ProfileController@show');
