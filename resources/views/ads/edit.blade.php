@@ -39,7 +39,7 @@
                     @endif
 
                 </form>
-                <form class="inline-block" action="ads/{{ $ad->id }}" method="POST">
+                <form class="inline-block" action="/ads/{{ $ad->id }}" method="POST">
                     @csrf 
                     @method('delete')
                     <button class="red-button" type="submit">

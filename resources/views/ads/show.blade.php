@@ -4,7 +4,11 @@
 <div id="ad-details" class="white-box">
     <div id="ad-details-header" class="line-bottom">
         <div><h2>{{ $ad->title }}</h2></div>
-        <div id="ad-details-user">Placed by: {{ $user }}</div>
+        <div id="ad-details-user">Placed by: 
+            <a href="/profiles/{{ $ad->user_id }}">
+                {{ $user }}
+            </a>
+        </div>
     </div>
     <div id="ad-details-description">
         {{ $ad->description }}
