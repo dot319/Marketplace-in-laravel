@@ -3,6 +3,9 @@
 Visit the project Trello board <a href="https://trello.com/b/naFvOXNv/new-marketplace">here</a>.<br />
 Visit my <a href="https://www.doriekeberends.nl">portfolio</a>.</p>
 
+<b>Wednesday, November 14th 2018</b>
+- Added user profile page
+
 <b>Tuesday, November 13th 2018</b>
 - Created an ad details page
 - Users can now edit their own ads
