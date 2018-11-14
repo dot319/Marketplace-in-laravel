@@ -37,7 +37,7 @@
                 @else
 
                     <span>
-                        Welcome, {{ Auth::user()->name }}!
+                        Welcome, {{ Auth::user()->username }}!
                     </span>
                     <span>
                         <a href="{{ route('logout') }}" 

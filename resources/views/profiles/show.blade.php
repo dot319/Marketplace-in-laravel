@@ -5,7 +5,7 @@
 <div class="white-box">
     <div id="profile-header" class="line-bottom">
         <div>
-            <h2> {{ $user->name }} </h2>
+            <h2> {{ $user->username }} </h2>
         </div>
         @if ($user->id == $auth)
             <div class="margin-left-auto">
@@ -19,13 +19,13 @@
         @endif 
     </div>
     <div>
-        <p> Welcome to {{ $user->name }}'s profile!</p>
+        <p> Welcome to {{ $user->username }}'s profile!</p>
     </div>
 </div>
 
 <div class="white-box margin-top-20">
     <div class="line-bottom">
-        <h4>Ads by {{ $user->name }}</h4>
+        <h4>Ads by {{ $user->username }}</h4>
     </div>
     @if(count($ads) > 0)
         <div id="profile-ad-list">
@@ -40,7 +40,7 @@
             @endforeach
         </div>
     @else 
-        {{ $user->name }} doesn't have any ads to display.
+        {{ $user->username }} doesn't have any ads to display.
     @endif
 </div>
 
