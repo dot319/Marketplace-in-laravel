@@ -18,6 +18,14 @@ button,
 button:hover {
     background-color:  rgb(0, 93, 216);
 }
+#profile-ad-list div,
+#ad-details-description {
+    background-color: rgb(241, 247, 255);
+}
+
+#profile-ad-list div:hover {
+    background-color: rgb(233, 242, 255);
+}
 
 #navbar-ad-button,
 #landing-page-ad-button {
@@ -58,7 +66,7 @@ p {
     line-height: 1.5;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-weight: normal;
 }
 
@@ -68,6 +76,14 @@ h1 {
 
 h2 {
     font-size: 180%;
+}
+
+h3 {
+    font-size: 140%;
+}
+
+h4 {
+    font-size: 110%;
 }
 
 button {
@@ -88,10 +104,6 @@ footer {
 /* ========== General styling classes =============================================== */
 
 /* Text styling ------------------------------------------------- */
-
-/* .header {
-    font-family: 'KoHo', 'Calibri', sans-serif;
-} */
 
 .small-text {
     font-size: 85%;
@@ -139,6 +151,7 @@ footer {
 .line-bottom {
     border-bottom: 1px rgb(189, 189, 189) solid;
     padding-bottom: 8px;
+    margin-bottom: 20px;
 }
 
 .white-box {
@@ -341,6 +354,23 @@ footer {
 
 #ad-details-description {
     margin: 20px 0px;
-    background-color: rgb(241, 247, 255);
     padding: 10px;
+}
+
+/* ========== Profile page ======================================================== */
+
+/* Ad list --------------------------------------------------- */
+#profile-ad-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+#profile-ad-list div {
+    width: 200px;
+    padding: 20px;
+    margin: 6px;
+    border: solid;
+    border-width: 1px;
 }

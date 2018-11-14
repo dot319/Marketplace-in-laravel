@@ -6,6 +6,7 @@ Visit my <a href="https://www.doriekeberends.nl">portfolio</a>.</p>
 
 <b>Wednesday, November 14th 2018</b>
 - Added user profile page
+- Display user ads on profile page
 
 <b>Tuesday, November 13th 2018</b>
 - Created an ad details page
