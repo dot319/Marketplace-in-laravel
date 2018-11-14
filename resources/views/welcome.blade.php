@@ -9,7 +9,7 @@
                 <a href="{{ route('register') }}">{{ __('Register') }}</a>
             @endif
         @else
-            <span>Welcome, {{ Auth::user()->name }}! | </span>
+            <span>Welcome, {{ Auth::user()->username }}! | </span>
             <span>
                 <a href="{{ route('logout') }}" 
                     oncspanck="event.preventDefault();
