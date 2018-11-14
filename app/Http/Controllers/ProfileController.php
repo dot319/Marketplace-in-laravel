@@ -19,4 +19,17 @@ class ProfileController extends Controller
         $auth = Auth::id();
         return view('profiles/edit', ['user' => $user, 'auth' => $auth]);
     }
+
+    public function update(User $user) {
+        $validated = request()->validate([
+            'first_name' => [],
+            'last_name' => [],
+            'city' => [],
+            'country' => [],
+            'bio' => [],
+            'pic_url' => ['url']
+        ]);
+        $user->update($validated);
+        return redirect("/profiles/$user->id");
+    }
 }

@@ -6,7 +6,7 @@
         <div class="perfect-center-child white-bg padding-40 box-shadow rounded-10">
 
             @if ($user->id == $auth)
-            <form class="form" method="POST" action="/profiles/{{ $user->id }}/update">
+            <form class="form" method="POST" action="/profiles/{{ $user->id }}">
                 @csrf
                 @method('patch')
     
