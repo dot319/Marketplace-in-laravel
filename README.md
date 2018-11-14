@@ -1,6 +1,6 @@
 <h3>Marketplace reboot</h3>
 <p>This is a reboot of the marketplace project I made two weeks ago (<a href="https://github.com/dot319/Marketplace">this one</a>). I'm starting with a blank Laravel project and will rebuild it step by step.<br />
-See how the project is coming along <a href="https://virtualyardsale.doriekeberends.nl">here</a>.
+See how the project is coming along <a href="http://stark-beach-54911.herokuapp.com/">here</a>.
 Visit the project Trello board <a href="https://trello.com/b/naFvOXNv/new-marketplace">here</a>.<br />
 Visit my <a href="https://www.doriekeberends.nl">portfolio</a>.</p>
 
@@ -8,6 +8,7 @@ Visit my <a href="https://www.doriekeberends.nl">portfolio</a>.</p>
 - Added user profile page
 - Display user ads on profile page
 - Users can edit their profile page
+- Project is now also deployed through heroku <a href="http://stark-beach-54911.herokuapp.com/">here</a>.
 
 <b>Tuesday, November 13th 2018</b>
 - Created an ad details page
