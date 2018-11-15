@@ -46,6 +46,7 @@
 
             @if (count($auth->conversations->where('ad_id', $ad->id)) == 0)
 
+
                 <div id="ad-details-send-message">
                     <form method="POST" action="/conversations" class="form">
                         @csrf
@@ -73,25 +74,47 @@
                 </div>
 
             @else 
-
-                <div>
+                <div>Message history</div>
+                
                     @foreach ($auth->conversations as $conversation)
                         @if ($conversation->ad_id == $ad->id)
-                            @foreach ($conversation->messages as $message)
-                                @if ($message->user_id == $auth->id)
-                                    <div class="sent-message">
-                                        <p class="small-text"><b>You: </b></p>
-                                        <p class="small-text">{{ $message->message }}</p>
-                                        <p class="very-small-text">{{ $message->created_at }}</p>
+                            <div class="message-container">
+                                @foreach ($conversation->messages as $message)
+                                    @if ($message->user_id == $auth->id)
+                                        <div class="sent-message message">
+                                            <p class="small-text"><b>You: </b></p>
+                                            <p class="small-text">{{ $message->message }}</p>
+                                            <p class="very-small-text grey-text">{{ $message->created_at }}</p>
+                                        </div>
+                                    @else 
+                                        <div class="received-message message">
+                                            <p class="small-text"><b>Other person: </b></p>
+                                            <p class="small-text">{{ $message->message }}</p>
+                                            <p class="very-small-text grey-text">{{ $message->created_at }}</p>
+                                        </div>
+                                    @endif
+                                @endforeach
+                            </div>
+
+                            <div id="reply-form-container">
+                                <form id="reply-form" method="POST" action="/conversations/{{ $conversation->id }}">
+                                    @csrf
+                                    @method('patch')
+                
+                                    <div class="form-input">
+                                        <textarea class="text-input textarea" name="message">Send a message</textarea>
                                     </div>
-                                @else 
-                                    <div class="received-message">
-                                        <p class="small-text"><b>Other person: </b></p>
-                                        <p class="small-text">{{ $message->message }}</p>
-                                        <p class="very-small-text">{{ $message->created_at }}</p>
+                
+                                    <div>
+                                        <button type="submit">
+                                            <span class="im im-mail"></span>
+                                            &nbsp; Send
+                                        </button>
                                     </div>
-                                @endif
-                            @endforeach
+                
+                                </form>
+                            </div>
+
                         @endif
                     @endforeach
                 </div>
@@ -100,7 +123,21 @@
 
         @else 
 
-            You can't reply to your own ad.
+            @if (count($auth->conversations->where('ad_id', $ad->id)) > 0)
+                <div>
+                    <p>You have conversations about this ad with these users:</p>
+                </div>
+                @foreach ($auth->conversations as $conversation)
+                    @if ($conversation->ad_id == $ad->id)
+                        @foreach ($conversation->users as $user)
+                            @if ($user->id != $auth->id)
+                                <p>{{ $user->username }}</p>
+                            @endif
+                        @endforeach
+                    @endif
+                @endforeach
+
+            @endif
 
         @endif
 

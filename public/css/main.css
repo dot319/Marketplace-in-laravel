@@ -115,6 +115,14 @@ footer {
     font-size: 85%;
 }
 
+.very-small-text {
+    font-size: 70%;
+}
+
+.grey-text {
+    color: rgba(0, 0, 0, 0.5);
+}
+
 /* Element styling ---------------------------------------------- */
 .round-60 {
     height: 60px;
@@ -283,6 +291,48 @@ footer {
     background-color: rgb(255, 13, 13);
 }
 
+/* Message styling ---------------------------------- */
+.message-container {
+    background-color: rgb(219, 219, 219);
+    padding: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(143, 143, 143);
+    box-shadow: 1px 1px 2px inset rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 5px;
+}
+
+.message p {
+    margin: 1px;
+}
+
+.sent-message {
+    background-color: rgb(209, 255, 209);
+    margin-left: auto;
+}
+
+.received-message {
+    background-color: white;
+}
+
+#reply-form-container {
+    display: flex;
+}
+
+#reply-form {
+    width: 60%;
+    margin-left: auto;
+}
+
 /* ========== Landing page ========================================================== */
 #landing-page-user-box {
     position: fixed;
@@ -412,4 +462,3 @@ footer {
     border-width: 1px;
 }
 
-/* Just a check to see if git notices this change */
