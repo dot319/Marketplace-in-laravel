@@ -39,22 +39,26 @@
     @guest
         <div>You must be logged in to reply to ads. <a href="/login">Log in</a>.</div>
     @else
-        <div id="ad-details-send-message">
-            <form class="form">
-                <div class="form-header">
-                    Send a message to {{ $ad->user->username }} about this ad
-                </div>
-                <div class="form-input">
-                    <textarea class="text-input textarea"></textarea>
-                </div>
-                <div>
-                    <button type="submit">
-                        <span class="im im-mail"></span>
-                        &nbsp; Send
-                    </button>
-                </div>
-            </form>
-        </div>
+        @if ($auth != $ad->user_id)
+            <div id="ad-details-send-message">
+                <form class="form">
+                    <div class="form-header">
+                        Send a message to {{ $ad->user->username }} about this ad
+                    </div>
+                    <div class="form-input">
+                        <textarea class="text-input textarea"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit">
+                            <span class="im im-mail"></span>
+                            &nbsp; Send
+                        </button>
+                    </div>
+                </form>
+            </div>
+        @else 
+            You can't reply to your own ad.
+        @endif
     @endguest
 
 </div>
