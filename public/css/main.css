@@ -6,8 +6,12 @@
     border-color: rgb(65, 65, 65);
 }
 
+a {
+    color: rgb(0, 110, 255);
+}
+
 a:hover {
-    color: rgb(0, 0, 0);
+    color: rgb(0, 93, 216);
 }
 
 button,
@@ -357,6 +361,7 @@ footer {
 }
 
 /* ========== Ad details ========================================================== */
+/* Ad ------------------------------------------------------- */
 #ad-details-header {
     display: flex;
     align-items: baseline;
@@ -369,6 +374,13 @@ footer {
 #ad-details-description {
     margin: 20px 0px;
     padding: 10px;
+}
+
+/* Send message --------------------------------------------- */
+#ad-details-send-message {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
 }
 
 /* ========== Profile page ======================================================== */

@@ -19,22 +19,43 @@
 
     
     @if ($ad->user_id == $auth)
-
-    <div class="margin-top-20">
-        <a href="/ads/{{ $ad->id }}/edit">
-            <button><span class="im im-edit"></span> Edit</button>
-        </a>
-        <form class="inline margin-left-20" action="/ads/{{ $ad->id }}" method="POST">
-            @csrf 
-            @method('delete')
-            <button class="red-button" type="submit">
-                <span class="im im-x-mark-circle"></span>
-                 Delete
-            </button>
-        </form>
-    </div>
-
+        <div class="margin-top-20">
+            <a href="/ads/{{ $ad->id }}/edit">
+                <button><span class="im im-edit"></span> Edit</button>
+            </a>
+            <form class="inline margin-left-20" action="/ads/{{ $ad->id }}" method="POST">
+                @csrf 
+                @method('delete')
+                <button class="red-button" type="submit">
+                    <span class="im im-x-mark-circle"></span>
+                    Delete
+                </button>
+            </form>
+        </div>
     @endif
+
+    <div class="line-bottom margin-top-20"></div>
+
+    @guest
+        <div>You must be logged in to reply to ads. <a href="/login">Log in</a>.</div>
+    @else
+        <div id="ad-details-send-message">
+            <form class="form">
+                <div class="form-header">
+                    Send a message to {{ $user }} about this ad
+                </div>
+                <div class="form-input">
+                    <textarea class="text-input textarea"></textarea>
+                </div>
+                <div>
+                    <button type="submit">
+                        <span class="im im-mail"></span>
+                        &nbsp; Send
+                    </button>
+                </div>
+            </form>
+        </div>
+    @endguest
 
 </div>
 
