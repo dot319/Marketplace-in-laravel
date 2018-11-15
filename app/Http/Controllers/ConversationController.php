@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Conversation;
+use App\Message;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ConversationController extends Controller
 {
@@ -33,9 +37,30 @@ class ConversationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request) //This entire function needs to be simplified, broken down, etc.
     {
-        //
+        $validated = request()->validate([
+            'ad_id' => ['nullable', 'integer']
+        ]);
+        $conversation = Conversation::create($validated);
+
+        $sender = User::where('id', Auth::id())->first();
+        $conversation->users()->save($sender);
+
+        $receiver_id = DB::table('ads')->where('id', request('ad_id'))->value('user_id');
+        $receiver = User::where('id', $receiver_id)->first();
+        $conversation->users()->save($receiver);
+
+        $validated = request()->validate([
+            'message' => ['required']
+        ]);
+        $validated['user_id'] = Auth::id();
+
+        $message = new Message($validated);
+        $conversation->messages()->save($message);
+
+        $ad_id = request('ad_id');
+        return redirect("/ads/$ad_id");
     }
 
     /**

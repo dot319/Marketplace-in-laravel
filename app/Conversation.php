@@ -15,4 +15,8 @@ class Conversation extends Model
     public function ad() {
         return $this->belongsTo('App\Ad');
     }
+
+    public function messages() {
+        return $this->hasMany('App\Message');
+    }
 }

@@ -74,7 +74,27 @@
 
             @else 
 
-                <div>There is a conversation about this ad!</div>
+                <div>
+                    @foreach ($auth->conversations as $conversation)
+                        @if ($conversation->ad_id == $ad->id)
+                            @foreach ($conversation->messages as $message)
+                                @if ($message->user_id == $auth->id)
+                                    <div class="sent-message">
+                                        <p class="small-text"><b>You: </b></p>
+                                        <p class="small-text">{{ $message->message }}</p>
+                                        <p class="very-small-text">{{ $message->created_at }}</p>
+                                    </div>
+                                @else 
+                                    <div class="received-message">
+                                        <p class="small-text"><b>Other person: </b></p>
+                                        <p class="small-text">{{ $message->message }}</p>
+                                        <p class="very-small-text">{{ $message->created_at }}</p>
+                                    </div>
+                                @endif
+                            @endforeach
+                        @endif
+                    @endforeach
+                </div>
 
             @endif
 
