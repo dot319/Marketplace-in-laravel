@@ -202,6 +202,10 @@ footer {
     margin-right: 15%;
 }
 
+.flexbox {
+    display: flex;
+}
+
 /* ========== Recurring element styling ============================================= */
 
 /* Form styling ------------------------------------------------- */
@@ -364,6 +368,14 @@ footer {
 /* ========== Profile page ======================================================== */
 #profile-header {
     display: flex;
+}
+
+.profile-pic {
+    border: solid;
+    border-width: 1px;
+    margin: 20px;
+    max-width: 200px;
+    max-height: 200px;
 }
 
 /* Ad list --------------------------------------------------- */

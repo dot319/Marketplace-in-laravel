@@ -18,8 +18,13 @@
             </div>
         @endif 
     </div>
-    <div>
-        <p> Welcome to {{ $user->username }}'s profile!</p>
+    <div class="flexbox">
+        <div>
+            Some information
+        </div>
+        <div class="margin-left-auto">
+            <img class="profile-pic" src="{{ $user->pic_url }}" alt="{{ $user->username }}'s profile picture">
+        </div>
     </div>
 </div>
 
