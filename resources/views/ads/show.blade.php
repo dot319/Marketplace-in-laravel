@@ -18,7 +18,7 @@
     </div>
 
     
-    @if ($ad->user_id == $auth)
+    @if ($ad->user_id == $auth->id)
         <div class="margin-top-20">
             <a href="/ads/{{ $ad->id }}/edit">
                 <button><span class="im im-edit"></span> Edit</button>
@@ -37,28 +37,53 @@
     <div class="line-bottom margin-top-20"></div>
 
     @guest
+
         <div>You must be logged in to reply to ads. <a href="/login">Log in</a>.</div>
+
     @else
-        @if ($auth != $ad->user_id)
-            <div id="ad-details-send-message">
-                <form class="form">
-                    <div class="form-header">
-                        Send a message to {{ $ad->user->username }} about this ad
-                    </div>
-                    <div class="form-input">
-                        <textarea class="text-input textarea"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit">
-                            <span class="im im-mail"></span>
-                            &nbsp; Send
-                        </button>
-                    </div>
-                </form>
-            </div>
+
+        @if ($ad->user_id != $auth->id)
+
+            @if (count($auth->conversations->where('ad_id', $ad->id)) == 0)
+
+                <div id="ad-details-send-message">
+                    <form method="POST" action="/conversations" class="form">
+                        @csrf
+
+                        <div class="form-header">
+                            Send a message to {{ $ad->user->username }} about this ad
+                        </div>
+
+                        <div class="form-input">
+                            <textarea class="text-input textarea" name="message"></textarea>
+                        </div>
+
+                        <div>
+                            <input type="hidden" name="ad_id" value="{{ $ad->id }}">
+                        </div>
+
+                        <div>
+                            <button type="submit">
+                                <span class="im im-mail"></span>
+                                &nbsp; Send
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            @else 
+
+                <div>There is a conversation about this ad!</div>
+
+            @endif
+
         @else 
+
             You can't reply to your own ad.
+
         @endif
+
     @endguest
 
 </div>

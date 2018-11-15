@@ -59,7 +59,7 @@ class AdController extends Controller
      */
     public function show(Ad $ad)
     {
-        $auth = Auth::id();
+        $auth = Auth::user();
         return view('ads/show', ['ad' => $ad, 'auth' => $auth]);
     }
 
