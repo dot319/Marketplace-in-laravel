@@ -20,12 +20,30 @@
     </div>
     <div class="flexbox">
         <div>
-            Some information
+            @if ($user->first_name || $user->last_name)
+                <p><span class="im im-id-card"></span> &nbsp;&nbsp; {{ $user->first_name . " " . $user->last_name }}</p>
+            @endif
+            @if ($user->city && $user->country)
+            <p><span class="im im-location"></span> &nbsp;&nbsp; {{ $user->city . ", " . $user->country }}</p>
+            @elseif ($user->city || $user->country)
+            <p><span class="im im-location"></span> &nbsp;&nbsp; {{ $user->city . $user->country }}</p>
+            @endif
+            <p>Total number of ads placed: {{ count($ads) }}</p>
+            <p>Member since: {{ $member_for }}</p>
         </div>
         <div class="margin-left-auto">
+            @if ($user->pic_url)
             <img class="profile-pic" src="{{ $user->pic_url }}" alt="{{ $user->username }}'s profile picture">
+            @else
+            <img class="profile-pic" src="https://image.ibb.co/mTNBZf/default-profile-pic.png" alt="{{ $user->username }}'s profile picture">
+            @endif
         </div>
     </div>
+    @if ($user->bio)
+    <div class="light-bg margin-20 padding-40">
+        <p>{{ $user->bio }}</p>
+    </div>
+    @endif
 </div>
 
 <div class="white-box margin-top-20">

@@ -4,6 +4,9 @@ See how the project is coming along <a href="http://stark-beach-54911.herokuapp.
 Visit the project Trello board <a href="https://trello.com/b/naFvOXNv/new-marketplace">here</a>.<br />
 Visit my <a href="https://www.doriekeberends.nl">portfolio</a>.</p>
 
+<b>Thursday, November 15th 2018</b>
+- Profile page now displays profile picture and some user information
+
 <b>Wednesday, November 14th 2018</b>
 - Added user profile page
 - Display user ads on profile page

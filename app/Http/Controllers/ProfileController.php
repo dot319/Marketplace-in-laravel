@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\TimeDate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -12,7 +13,8 @@ class ProfileController extends Controller
     public function show(User $user) {
         $ads = DB::table('ads')->where('user_id', $user->id)->get();
         $auth = Auth::id();
-        return view('profiles/show', ['user' => $user, 'ads' => $ads, 'auth' => $auth]);
+        $member_for = (new TimeDate($user->created_at))->timeSince();
+        return view('profiles/show', ['user' => $user, 'ads' => $ads, 'auth' => $auth, 'member_for' => $member_for]);
     }
 
     public function edit(User $user) {
@@ -27,7 +29,7 @@ class ProfileController extends Controller
             'city' => [],
             'country' => [],
             'bio' => [],
-            'pic_url' => ['url']
+            'pic_url' => ['nullable', 'url']
         ]);
         $user->update($validated);
         return redirect("/profiles/$user->id");
