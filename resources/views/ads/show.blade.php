@@ -6,7 +6,7 @@
         <div><h2>{{ $ad->title }}</h2></div>
         <div id="ad-details-user">Placed by: 
             <a href="/profiles/{{ $ad->user_id }}">
-                {{ $user }}
+                {{ $ad->user->username }}
             </a>
         </div>
     </div>
@@ -42,7 +42,7 @@
         <div id="ad-details-send-message">
             <form class="form">
                 <div class="form-header">
-                    Send a message to {{ $user }} about this ad
+                    Send a message to {{ $ad->user->username }} about this ad
                 </div>
                 <div class="form-input">
                     <textarea class="text-input textarea"></textarea>

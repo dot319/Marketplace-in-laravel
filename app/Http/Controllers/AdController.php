@@ -59,9 +59,8 @@ class AdController extends Controller
      */
     public function show(Ad $ad)
     {
-        $user = DB::table('users')->where('id', $ad->user_id)->value('username');
         $auth = Auth::id();
-        return view('ads/show', ['ad' => $ad, 'user' => $user, 'auth' => $auth]);
+        return view('ads/show', ['ad' => $ad, 'auth' => $auth]);
     }
 
     /**
