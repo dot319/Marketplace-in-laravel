@@ -3,13 +3,19 @@
 @section('content')
 
     <div id="landing-page-user-box">
+
         @guest
             <a href="{{ route('login') }}">{{ __('Login') }}</a> | 
             @if (Route::has('register'))
                 <a href="{{ route('register') }}">{{ __('Register') }}</a>
             @endif
         @else
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span>Welcome, {{ Auth::user()->username }}! | </span>
+            <a href="/home">
+                <span class="im im-home"></span>
+            </a> | 
             <span>
                 <a href="{{ route('logout') }}" 
                     oncspanck="event.preventDefault();
