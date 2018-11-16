@@ -102,7 +102,7 @@
                                     @method('patch')
                 
                                     <div class="form-input">
-                                        <textarea class="text-input textarea" name="message">Send a message</textarea>
+                                        <textarea class="text-input reply-textarea" name="message">Send a message</textarea>
                                     </div>
                 
                                     <div>
@@ -131,7 +131,63 @@
                     @if ($conversation->ad_id == $ad->id)
                         @foreach ($conversation->users as $user)
                             @if ($user->id != $auth->id)
-                                <p>{{ $user->username }}</p>
+
+                                @if (request('conv') == $user->id )
+                                    <p>
+                                        <a href="/profiles/{{ $user->id }}">
+                                            {{ $user->username }} &nbsp;
+                                        </a> 
+                                        <a href="/ads/{{ $ad->id }}">
+                                            <span class="small-text">Collapse conversation</span>
+                                        </a> 
+                                    </p>
+                                    <div class="message-container">
+                                        @foreach ($conversation->messages as $message)
+                                            @if ($message->user_id == $auth->id)
+                                                <div class="sent-message message">
+                                                    <p class="small-text"><b>You: </b></p>
+                                                    <p class="small-text">{{ $message->message }}</p>
+                                                    <p class="very-small-text grey-text">{{ $message->created_at }}</p>
+                                                </div>
+                                            @else 
+                                                <div class="received-message message">
+                                                    <p class="small-text"><b>Other person: </b></p>
+                                                    <p class="small-text">{{ $message->message }}</p>
+                                                    <p class="very-small-text grey-text">{{ $message->created_at }}</p>
+                                                </div>
+                                            @endif
+                                        @endforeach
+                                    </div>
+        
+                                    <div id="reply-form-container">
+                                        <form id="reply-form" method="POST" action="/conversations/{{ $conversation->id }}">
+                                            @csrf
+                                            @method('patch')
+                        
+                                            <div class="form-input">
+                                                <textarea class="text-input reply-textarea" name="message">Send a message</textarea>
+                                            </div>
+                        
+                                            <div>
+                                                <button type="submit">
+                                                    <span class="im im-mail"></span>
+                                                    &nbsp; Send
+                                                </button>
+                                            </div>
+                        
+                                        </form>
+                                    </div>
+                                @else
+                                    <p>
+                                        <a href="/profiles/{{ $user->id }}">
+                                            {{ $user->username }} &nbsp;
+                                        </a> 
+                                        <a href="/ads/{{ $ad->id }}?conv={{ $user->id }}">
+                                            <span class="small-text">View conversation</span>
+                                        </a> 
+                                    </p>
+                                @endif
+
                             @endif
                         @endforeach
                     @endif

@@ -333,6 +333,11 @@ footer {
     margin-left: auto;
 }
 
+.reply-textarea {
+    resize: none;
+    height: 100px;
+}
+
 /* ========== Landing page ========================================================== */
 #landing-page-user-box {
     position: fixed;
