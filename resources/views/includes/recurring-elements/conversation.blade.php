@@ -22,7 +22,7 @@
         @method('patch')
 
         <div class="form-input">
-            <textarea class="text-input reply-textarea" name="message">Send a message</textarea>
+            <textarea class="text-input reply-textarea" name="message" placeholder="Send a message" required></textarea>
         </div>
 
         <div>

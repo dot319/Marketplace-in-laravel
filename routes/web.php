@@ -36,3 +36,4 @@ Route::patch('/profiles/{user}', 'ProfileController@update');
 
 //----------------------------------------------------------------------
 Route::post('/conversations', 'ConversationController@store');
+Route::patch('conversations/{conversation}', 'ConversationController@update');

@@ -59,8 +59,7 @@ class ConversationController extends Controller
         $message = new Message($validated);
         $conversation->messages()->save($message);
 
-        $ad_id = request('ad_id');
-        return redirect("/ads/$ad_id");
+        return back();
     }
 
     /**
@@ -94,7 +93,15 @@ class ConversationController extends Controller
      */
     public function update(Request $request, Conversation $conversation)
     {
-        //
+        $validated = request()->validate([
+            'message' => ['required']
+        ]);
+        $validated['user_id'] = Auth::id();
+
+        $message = new Message($validated);
+        $conversation->messages()->save($message);
+
+        return back();
     }
 
     /**
