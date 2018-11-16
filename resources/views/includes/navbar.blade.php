@@ -37,7 +37,10 @@
                 @else
 
                     <span>
-                        Welcome, {{ Auth::user()->username }}!
+                        Welcome, 
+                        <a href="/profiles/{{ Auth::id() }}">
+                            <b>{{ Auth::user()->username }}</b>
+                        </a>!
                     </span>
                     <a href="/home">
                         <span class="im im-home"></span>

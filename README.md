@@ -4,8 +4,13 @@ See how the project is coming along <a href="http://stark-beach-54911.herokuapp.
 Visit the project Trello board <a href="https://trello.com/b/naFvOXNv/new-marketplace">here</a>.<br />
 Visit my <a href="https://www.doriekeberends.nl">portfolio</a>.</p>
 
+<b>Friday, November 16th 2018</b>
+- Ad owners can reply to messages sent about their ads
+- Improved site navigation somewhat
+
 <b>Thursday, November 15th 2018</b>
 - Profile page now displays profile picture and some user information
+- There is a contact form below ads so users can contact the ad owner
 
 <b>Wednesday, November 14th 2018</b>
 - Added user profile page
