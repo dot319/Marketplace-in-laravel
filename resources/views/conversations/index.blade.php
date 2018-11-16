@@ -12,7 +12,7 @@
                             @foreach ($conversation->users as $newUser)
                                 @if ($newUser->id != Auth::id())
                                 <a href="/conversations/{{ $conversation->id }}">
-                                    <p>{{ $newUser->username }}</p>
+                                    <p>You're talking to {{ $newUser->username }} about ad #{{ $conversation->ad_id }}</p>
                                 </a>
                                 @endif
                             @endforeach
