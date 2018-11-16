@@ -16,7 +16,7 @@ class AdController extends Controller
      */
     public function index()
     {
-        $ads = Ad::all();
+        $ads = Ad::all()->reverse();
         return view('ads/index', ['ads' => $ads]);
     }
 
