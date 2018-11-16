@@ -39,6 +39,9 @@
                     <span>
                         Welcome, {{ Auth::user()->username }}!
                     </span>
+                    <a href="/home">
+                        <span class="im im-home"></span>
+                    </a> | 
                     <span>
                         <a href="{{ route('logout') }}" 
                             oncspanck="event.preventDefault();
