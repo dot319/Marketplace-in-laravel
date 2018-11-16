@@ -18,7 +18,8 @@ class ConversationController extends Controller
      */
     public function index()
     {
-        //
+        $conversations = Conversation::all();
+        return view('conversations/index', ['conversations' => $conversations]);
     }
 
     /**
@@ -70,7 +71,7 @@ class ConversationController extends Controller
      */
     public function show(Conversation $conversation)
     {
-        //
+        return view('conversations/show', ['conversation' => $conversation]);
     }
 
     /**

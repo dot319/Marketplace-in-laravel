@@ -38,12 +38,13 @@
 
                     <span>
                         Welcome, 
-                        <a href="/profiles/{{ Auth::id() }}">
-                            <b>{{ Auth::user()->username }}</b>
-                        </a>!
-                    </span>
+                        <a href="/profiles/{{ Auth::id() }}"><b>{{ Auth::user()->username }}</b></a>!
+                    </span> | 
                     <a href="/home">
                         <span class="im im-home"></span>
+                    </a> | 
+                    <a href="/conversations">
+                        <span class="im im-mail"></span>
                     </a> | 
                     <span>
                         <a href="{{ route('logout') }}" 

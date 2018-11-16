@@ -1,6 +1,6 @@
 <div class="message-container">
     @foreach ($conversation->messages as $message)
-        @if ($message->user_id == $auth->id)
+        @if ($message->user_id == Auth::id())
             <div class="sent-message message">
                 <p class="small-text"><b>You: </b></p>
                 <p class="small-text">{{ $message->message }}</p>
