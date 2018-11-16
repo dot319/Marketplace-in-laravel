@@ -7,6 +7,7 @@ Visit my <a href="https://www.doriekeberends.nl">portfolio</a>.</p>
 <b>Friday, November 16th 2018</b>
 - Ad owners can reply to messages sent about their ads
 - Improved site navigation somewhat
+- Landing page search bar works
 
 <b>Thursday, November 15th 2018</b>
 - Profile page now displays profile picture and some user information
