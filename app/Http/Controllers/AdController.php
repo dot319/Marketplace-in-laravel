@@ -16,7 +16,8 @@ class AdController extends Controller
      */
     public function index()
     {
-        $ads = Ad::all()->reverse();
+        $search = request('search');
+        $ads = Ad::where('title', 'like', "%$search%")->orderBy('id', 'desc')->get();
         return view('ads/index', ['ads' => $ads]);
     }
 

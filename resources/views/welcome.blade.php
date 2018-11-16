@@ -41,8 +41,9 @@
             </div>
 
             <div>
-                <form>
-                    <input placeholder="Search for shoes, wardrobes, concert tickets, iPhones..." id="landing-page-search-bar" type="text">
+                <form method="GET" action="/ads">
+                    @csrf
+                    <input name="search" placeholder="Search for shoes, wardrobes, concert tickets, iPhones..." id="landing-page-search-bar" type="text">
                     <a href="/ads">
                         <button class="round-60 perfect-center-inline-flex-parent">
                             <span class="im im-magnifier"></span>
