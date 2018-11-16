@@ -34,9 +34,9 @@
     
                 <div class="form-input">
                     <button type="submit">{{ __('Login') }}</button>
-                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                    {{-- <a class="btn btn-link" href="{{ route('password.request') }}">
                         &nbsp;&nbsp;&nbsp;{{ __('Forgot Your Password?') }}
-                    </a>
+                    </a> --}}
                 </div>
     
 
