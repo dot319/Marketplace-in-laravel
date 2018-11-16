@@ -46,6 +46,11 @@
                         </button>
                     </a>
                 </form>
+                <p>
+                    <a href="/ads">
+                        ...or browse all ads
+                    </a>
+                </p>
             </div>
 
             <div>
